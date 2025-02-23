@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "social-bg": "#1e3a8a", // dark blue
+        "social-icon": "#d1d5db", // light gray
       },
     },
   },

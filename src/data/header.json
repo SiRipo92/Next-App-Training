@@ -1,0 +1,54 @@
+{
+    "SocialsNavBar": "SocialsNavBar",
+    "socialLinks": [
+      {
+        "id": "facebook",
+        "name": "Facebook",
+        "href": "https://www.facebook.com/sarek",
+        "ariaLabel": "Visit our Facebook page",
+        "alt": "Facebook icon for navigation"
+      },
+      {
+        "id": "instagram",
+        "name": "Instagram",
+        "href": "https://www.instagram.com/yourprofile",
+        "ariaLabel": "Visit our Instagram profile",
+        "alt": "Instagram icon for navigation"
+      },
+      {
+        "id": "linkedin",
+        "name": "LinkedIn",
+        "href": "https://www.linkedin.com/in/yourprofile",
+        "ariaLabel": "Visit our LinkedIn profile",
+        "alt": "LinkedIn icon for navigation"
+      }
+    ],
+
+    "MainMenuNavBar": "MainMenuNavBar",
+    "menuLinks": [
+      {
+        "id": "home",
+        "name": "Home",
+        "href": "/",
+        "ariaLabel": "Go to Home page"
+      },
+      {
+        "id": "about",
+        "name": "About",
+        "href": "/about",
+        "ariaLabel": "Go to About page"
+      },
+      {
+        "id": "services",
+        "name": "Services",
+        "href": "/services",
+        "ariaLabel": "Go to Services page"
+      },
+      {
+        "id": "contact",
+        "name": "Contact",
+        "href": "/contact",
+        "ariaLabel": "Go to Contact page"
+      }
+    ]
+}
