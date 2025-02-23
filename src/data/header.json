@@ -27,25 +27,25 @@
     "MainMenuNavBar": "MainMenuNavBar",
     "menuLinks": [
       {
-        "id": "home",
+        "id": "1",
         "name": "Home",
         "href": "/",
         "ariaLabel": "Go to Home page"
       },
       {
-        "id": "about",
+        "id": "2",
         "name": "About",
         "href": "/about",
         "ariaLabel": "Go to About page"
       },
       {
-        "id": "services",
+        "id": "3",
         "name": "Services",
         "href": "/services",
         "ariaLabel": "Go to Services page"
       },
       {
-        "id": "contact",
+        "id": "4",
         "name": "Contact",
         "href": "/contact",
         "ariaLabel": "Go to Contact page"

@@ -1,7 +1,12 @@
+import React from 'react';
 import SocialLinks from '@/templates/Header/socialLinks.jsx';
+import MainMenu from '@/templates/Header/mainMenu.jsx'
+import '@/styles/global.css'
+
 
 const Header = () => {
   const socialLinks = SocialLinks.getLinks();
+  const menuItems = MainMenu.getMenuItems(); 
 
   return (
     <header className="fixed top-0 w-full z-50">
@@ -25,41 +30,37 @@ const Header = () => {
       </div>
 
       {/* Main Navigation Bar */}
+      {/* Main Navigation Bar */}
       <nav className="bg-white shadow-md w-full h-20 flex items-center justify-center">
-        <ul className="flex space-x-1">
-          <li className="font-bold flex justify-around ">
-            <button className="relative btn-primary navMainMenu">
-              About Me
-              <ul className="absolute hidden bg-white shadow-md mt-2 p-2 rounded-md">
-                <li>
-                  <a href="/my-background" className="block px-4 py-2 hover:bg-gray-100">
-                    Example Dropdown Link
-                  </a>
-                </li>
-                <li>
-                  <a href="/my-hobbies" className="block px-4 py-2 hover:bg-gray-100">
-                    My Hobbies
-                  </a>
-                </li>
-              </ul>
-            </button>
-            <button className="relative">
-              Training
-              <ul className="absolute hidden bg-white shadow-md mt-2 p-2 rounded-md">
-                <li>
-                  <a href="/training" className="block px-4 py-2 hover:bg-gray-100">
-                    Training
-                  </a>
-                </li>
-                <li>
-                  <a href="/training-locations" className="block px-4 py-2 hover:bg-gray-100">
-                    Training Locations
-                  </a>
-                </li>
-              </ul>
-            </button>
+        <ul className="flex space-x-6">
+          {menuItems.map((menuItem) => (
+            <li key={menuItem.id} className="relative group">
+              {/* Main Menu Item */}
+              <a
+                href={menuItem.href}
+                aria-label={menuItem.ariaLabel}
+                className="font-bold px-4 py-2 text-gray-700 hover:text-gray-900"
+              >
+                {menuItem.name}
+              </a>
 
-          </li>
+              {/* Dropdown Menu (if submenu exists) */}
+              {menuItem.submenu && menuItem.submenu.length > 0 && (
+                <ul className="absolute left-0 hidden group-hover:block bg-white shadow-md mt-2 p-2 rounded-md w-48">
+                  {menuItem.submenu.map((subItem) => (
+                    <li key={subItem.id}>
+                      <a
+                        href={subItem.href}
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        {subItem.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
